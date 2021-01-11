@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<link rel="stylesheet" href="css/Keydown Keyup.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<form onsubmit="return false" id="form">
+		Предотвратить действие по умолчанию для:
+		<label>
+			<input type="checkbox" name="keydownStop" value="1">Keydown
+		</label>&nbsp;&nbsp;&nbsp;
+		<label>
+			<input type="checkbox" name="keyupStop" value="1">keyup
+		</label>
+
+		<p>
+			Игнорировать:
+			<label>
+				<input type="checkbox" name="keydownIgnore" value="1">Keydown
+			</label>&nbsp;&nbsp;&nbsp;
+			<label>
+				<input type="checkbox" name="keyupIgnore" value="1">keyup
+			</label>
+		</p>
+
+		<p>Сфокусируйтесь на поле и нажмите какую-нибудь клавишу.</p>
+
+		<input type="text" placeholder="Клавишу нажимать тут" id="kinput">
+
+		<textarea id="area"></textarea>
+		<input type="button" value="Очистить" onclick="area.value = ''">
+	</form>
+
+	<input type="tel" placeholder="Введите телефон" class="tel">
+
+	<input onkeydown="return checkPhoneKey(event.key)" placeholder="Введите телефон" type="tel">
+
+	<script src="js/Keydown Keyup.js"></script>
+</body>
+
+</html>
